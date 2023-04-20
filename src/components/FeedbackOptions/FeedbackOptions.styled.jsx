@@ -8,6 +8,7 @@ border-radius: 6px;
 border: 1px solid skyblue;
 padding: 4px 8px;
 font-size: 18px;
+text-transform: capitalize;
 transition: transform 300ms linear;
 :active {
   background-color: skyblue;

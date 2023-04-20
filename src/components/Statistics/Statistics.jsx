@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
+import { Text, Wrap } from './Statistics.styled';
 
 export const Statistics = ({ options, statistic, total, positiveFeedback }) => {
   return (
-    <>
+    <Wrap>
       {options.map((item, i) => {
         return (
-          <p key={i}>{item}: {statistic[item]}</p>
+          <Text key={i}>{item}: {statistic[item]}</Text>
         )
       })}
-      <p>Total: {total()}</p>
-      <p>Positive feedback: {positiveFeedback()}%</p>
-    </>
+      <Text>total: {total()}</Text>
+      <Text>positive feedback: {positiveFeedback()}%</Text>
+    </Wrap>
   )
 };
 
