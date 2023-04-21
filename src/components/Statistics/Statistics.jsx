@@ -9,7 +9,7 @@ export const Statistics = ({ options, statistic, total, positiveFeedback }) => {
           <Text key={i}>{item}: {statistic[item]}</Text>
         )
       })}
-      <Text>total: {total()}</Text>
+      <Text>total: {total}</Text>
       <Text>positive feedback: {positiveFeedback()}%</Text>
     </Wrap>
   )
@@ -23,6 +23,6 @@ Statistics.propTypes = {
     neutral: PropTypes.number.isRequired,
     bad: PropTypes.number.isRequired,
   }).isRequired,
-  total: PropTypes.func.isRequired,
+  total: PropTypes.number.isRequired,
   positiveFeedback: PropTypes.func.isRequired,
 };
